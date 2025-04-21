@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: aliceblue;
+}
+h1{
+    font-family: 'Kanit';
+    font-weight: 400;
+}
+.container,.container2,.container3,.container4{
+    width: 700px;
+    height: 500px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+}
+.container2,.container3,.container4{
+    display: none;
+}
+input{
+    width: 20px;
+}
+.quiz{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 50px;
+}
+.resulttopic{
+    text-align: center;
+    margin-top: 140px;
+    font-size: 50px;
+}
+.result{
+    text-align: center;
+    margin-top: 30px;
+}
+.choice{
+    display: flex;
+    gap: 10px;
+}
+.choiceall{
+    margin-left: 100px;
+    margin-top: 40px;
+}
+.button1,.button2,.button3{
+    width: 200px;
+    height: 40px;
+    font-family: 'Kanit';
+    font-weight: 400;
+    background-color: cadetblue;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    font-size: 25px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    margin-top: 40px;
+    cursor: pointer;
+}
