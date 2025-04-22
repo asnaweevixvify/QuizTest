@@ -15,9 +15,12 @@ const questions = [
     { choices: choiceTwo, correctValue: '3' },  // 8x8 = 64
     { choices: choiceThree, correctValue: '2' } // 12x12 = 144
 ];
+const buttons = [btnOne, btnTwo, btnThree];
+const currentBg = [bgOne,bgTwo,bgThree]
+const nextBg  = [bgTwo,bgThree,bgFour]
 
 function testQuiz(){
-    questions.forEach(group=>{
+    questions.forEach((group)=>{
         let answered = false
         group.choices.forEach(e=>{
             e.addEventListener('change',function(){
@@ -31,20 +34,13 @@ function testQuiz(){
         })
     })
 }
-
 function sendAnswer(){
-    btnOne.addEventListener('click',function(){
-        bgOne.style.display = 'none'
-        bgTwo.style.display = 'flex'
-    })
-    btnTwo.addEventListener('click',function(){
-        bgTwo.style.display = 'none'
-        bgThree.style.display = 'flex'
-    })
-    btnThree.addEventListener('click',function(){
-        bgThree.style.display = 'none'
-        bgFour.style.display = 'flex'
+    buttons.forEach((btn,index)=>{
+        btn.addEventListener('click',function(){
+            currentBg[index].style.display='none'
+            nextBg[index].style.display='flex'
+        })
     })
 }
-testQuiz();
 sendAnswer();
+testQuiz();
